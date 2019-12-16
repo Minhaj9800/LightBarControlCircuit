@@ -1,0 +1,5 @@
+set tool_name "ModelSim-Altera (VHDL)"
+set corner_file_list {
+	{{"Slow Model"} {Dual7SegMemoryExample.vho Dual7SegMemoryExample_vhd.sdo}}
+	{{"Fast Model"} {Dual7SegMemoryExample_fast.vho Dual7SegMemoryExample_vhd_fast.sdo}}
+}

@@ -1,0 +1,42 @@
+|ClockReduction
+CLK_IN => CLK_IN.IN1
+LED_OUT <= Flasher1s:f1s.port1
+
+
+|ClockReduction|Flasher1s:f1s
+C => L~reg0.CLK
+C => counter[0].CLK
+C => counter[1].CLK
+C => counter[2].CLK
+C => counter[3].CLK
+C => counter[4].CLK
+C => counter[5].CLK
+C => counter[6].CLK
+C => counter[7].CLK
+C => counter[8].CLK
+C => counter[9].CLK
+C => counter[10].CLK
+C => counter[11].CLK
+C => counter[12].CLK
+C => counter[13].CLK
+C => counter[14].CLK
+C => counter[15].CLK
+C => counter[16].CLK
+C => counter[17].CLK
+C => counter[18].CLK
+C => counter[19].CLK
+C => counter[20].CLK
+C => counter[21].CLK
+C => counter[22].CLK
+C => counter[23].CLK
+C => counter[24].CLK
+C => counter[25].CLK
+C => counter[26].CLK
+C => counter[27].CLK
+C => counter[28].CLK
+C => counter[29].CLK
+C => counter[30].CLK
+C => counter[31].CLK
+L <= L~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

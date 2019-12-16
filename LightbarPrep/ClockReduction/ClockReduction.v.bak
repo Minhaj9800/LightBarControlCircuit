@@ -1,0 +1,46 @@
+// The object of this code is to reduce the 50MHz clock of the DE-1 board found on
+// pin L1 to a 1-second period clock.  Of course, for the lightbar project, you will
+// want a faster clock (flashing at a fraction of a second rate.)  You can modify the 
+// code found here to accomplish that.
+
+// We will use LED R0 (pin R20) for the output.  It should flash at a rate of 1Hz.
+
+module ClockReduction(CLK_IN, LED_OUT);
+
+input CLK_IN;
+output LED_OUT;
+
+Flasher1s f1s (CLK_IN, LED_OUT);
+
+endmodule
+
+// ******************************************************************************
+
+module Flasher1s (C, L);
+
+input C;
+output L;
+reg L;
+
+parameter MAXCLK = 50000000; // 50Mhz = 50 million cycles per second
+
+integer counter;
+reg counter;
+
+initial
+	begin
+		counter = 0;
+		L = 1'b0;
+	end
+
+always @ (negedge C) // on the falling edge of the clock signal
+	begin
+		counter++;
+		if (counter > MAXCLK / 2)
+		begin
+			L = ~L;
+			counter = 0;
+		end
+	end
+
+endmodule

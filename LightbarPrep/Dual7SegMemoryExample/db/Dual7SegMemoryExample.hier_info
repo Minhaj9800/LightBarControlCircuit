@@ -1,0 +1,74 @@
+|Dual7SegMemoryExample
+BCD[0] => BCD[0].IN2
+BCD[1] => BCD[1].IN2
+BCD[2] => BCD[2].IN2
+BCD[3] => BCD[3].IN2
+SEL => SEL.IN1
+CLKn => _.IN1
+SevenSegA[6] <= BCDto7seg:segA.port2
+SevenSegA[5] <= BCDto7seg:segA.port2
+SevenSegA[4] <= BCDto7seg:segA.port2
+SevenSegA[3] <= BCDto7seg:segA.port2
+SevenSegA[2] <= BCDto7seg:segA.port2
+SevenSegA[1] <= BCDto7seg:segA.port2
+SevenSegA[0] <= BCDto7seg:segA.port2
+SevenSegB[6] <= BCDto7seg:segB.port2
+SevenSegB[5] <= BCDto7seg:segB.port2
+SevenSegB[4] <= BCDto7seg:segB.port2
+SevenSegB[3] <= BCDto7seg:segB.port2
+SevenSegB[2] <= BCDto7seg:segB.port2
+SevenSegB[1] <= BCDto7seg:segB.port2
+SevenSegB[0] <= BCDto7seg:segB.port2
+
+
+|Dual7SegMemoryExample|demux21:myDemux
+y => A.DATAB
+y => B.DATAB
+SEL => A.OUTPUTSELECT
+SEL => B.OUTPUTSELECT
+A <= A.DB_MAX_OUTPUT_PORT_TYPE
+B <= B.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Dual7SegMemoryExample|BCDto7seg:segA
+CLK => SEGMENT[6]~reg0.CLK
+CLK => SEGMENT[5]~reg0.CLK
+CLK => SEGMENT[4]~reg0.CLK
+CLK => SEGMENT[3]~reg0.CLK
+CLK => SEGMENT[2]~reg0.CLK
+CLK => SEGMENT[1]~reg0.CLK
+CLK => SEGMENT[0]~reg0.CLK
+DATA[0] => Decoder0.IN3
+DATA[1] => Decoder0.IN2
+DATA[2] => Decoder0.IN1
+DATA[3] => Decoder0.IN0
+SEGMENT[6] <= SEGMENT[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEGMENT[5] <= SEGMENT[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEGMENT[4] <= SEGMENT[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEGMENT[3] <= SEGMENT[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEGMENT[2] <= SEGMENT[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEGMENT[1] <= SEGMENT[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEGMENT[0] <= SEGMENT[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Dual7SegMemoryExample|BCDto7seg:segB
+CLK => SEGMENT[6]~reg0.CLK
+CLK => SEGMENT[5]~reg0.CLK
+CLK => SEGMENT[4]~reg0.CLK
+CLK => SEGMENT[3]~reg0.CLK
+CLK => SEGMENT[2]~reg0.CLK
+CLK => SEGMENT[1]~reg0.CLK
+CLK => SEGMENT[0]~reg0.CLK
+DATA[0] => Decoder0.IN3
+DATA[1] => Decoder0.IN2
+DATA[2] => Decoder0.IN1
+DATA[3] => Decoder0.IN0
+SEGMENT[6] <= SEGMENT[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEGMENT[5] <= SEGMENT[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEGMENT[4] <= SEGMENT[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEGMENT[3] <= SEGMENT[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEGMENT[2] <= SEGMENT[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEGMENT[1] <= SEGMENT[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEGMENT[0] <= SEGMENT[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

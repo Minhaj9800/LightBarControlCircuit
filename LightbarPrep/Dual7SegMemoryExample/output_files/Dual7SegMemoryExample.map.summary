@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Mar 23 16:25:37 2016
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : Dual7SegMemoryExample
+Top-level Entity Name : Dual7SegMemoryExample
+Family : Cyclone II
+Total logic elements : 16
+    Total combinational functions : 9
+    Dedicated logic registers : 14
+Total registers : 14
+Total pins : 20
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
